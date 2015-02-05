@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    title
+      | 【非公式】グランブルーファンタジー時限クエストAPI
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+  body
+    .wrapper
+      blockquote.twitter-tweet
+        a href=@special_quest_time.tweet_url
+          | 元ツイート
+      script src="//platform.twitter.com/widgets.js" charset="utf-8"

@@ -1,6 +1,10 @@
 class SpecialQuestTime < ActiveRecord::Base
   serialize :time_table
 
+  def self.latest
+    self.find_by(date: Time.zone.now.strftime('%Y%m%d')) || self.create_now
+  end
+
   def self.create_now
     tweet = TweetSearcher.new.fetch
     extractor = TweetExtractor.new(tweet.text)
