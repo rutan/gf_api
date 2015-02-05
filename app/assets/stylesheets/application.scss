@@ -10,9 +10,12 @@ html, body {
 }
 
 body {
-  background: url(asset_path("back.jpg")) no-repeat right bottom;
+  background: url(asset_path("back.jpg")) no-repeat right bottom fixed;
   background-size: cover;
+  line-height: 1.6;
+  font-size: 14px;
 }
+
 .wrapper {
   display: block;
   width: 90%;
@@ -25,4 +28,19 @@ body {
 iframe {
     margin: 0 !important;
     opacity: .9;
+}
+
+.api-info {
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+  margin-top: 32px;
+  padding: 16px;
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

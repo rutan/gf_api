@@ -8,7 +8,15 @@ html
     = csrf_meta_tags
   body
     .wrapper
-      blockquote.twitter-tweet
-        a href=@special_quest_time.tweet_url
-          | 元ツイート
-      script src="//platform.twitter.com/widgets.js" charset="utf-8"
+      .original-tweet
+        blockquote.twitter-tweet
+          a href=@special_quest_time.tweet_url
+            | 元ツイート
+
+      .api-info
+        p
+          | API:&nbsp;
+          a href=api_v1_special_quest_time_url(format: 'json')
+            = api_v1_special_quest_time_url(format: 'json')
+
+    script src="//platform.twitter.com/widgets.js" charset="utf-8"
